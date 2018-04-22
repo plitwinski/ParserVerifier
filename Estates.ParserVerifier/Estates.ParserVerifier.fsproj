@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>netcoreapp2.0</TargetFramework>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="TaskToAsync.fs" />
+    <Compile Include="Records.fs" />
+    <Compile Include="SesAccess.fs" />
+    <Compile Include="S3Access.fs" />
+    <Compile Include="Verification.fs" />
+    <Compile Include="Notifications.fs" />
+    <Compile Include="Handler.fs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.Core" Version="1.0.0" />
+    <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.1.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.18.1" />
+    <PackageReference Include="AWSSDK.SimpleEmail" Version="3.3.6.5" />
+    <PackageReference Include="FSharp.Control.AsyncSeq" Version="2.0.21" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Amazon.Lambda.Tools" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>
